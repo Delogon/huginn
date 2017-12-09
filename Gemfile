@@ -31,17 +31,17 @@ end
 
 # Optional libraries.  To conserve RAM, comment out any that you don't need,
 # then run `bundle` and commit the updated Gemfile and Gemfile.lock.
-gem 'twilio-ruby', '~> 3.11.5'    # TwilioAgent
-gem 'ruby-growl', '~> 4.1.0'      # GrowlAgent
-gem 'net-ftp-list', '~> 3.2.8'    # FtpsiteAgent
-gem 'wunderground', '~> 1.2.0'    # WeatherAgent
-gem 'forecast_io', '~> 2.0.0'     # WeatherAgent
-gem 'rturk', '~> 2.12.1'          # HumanTaskAgent
-gem 'hipchat', '~> 1.2.0'         # HipchatAgent
-gem 'xmpp4r',  '~> 0.5.6'         # JabberAgent
-gem 'mqtt'                        # MQTTAgent
-gem 'slack-notifier', '~> 1.0.0'  # SlackAgent
-gem 'hypdf', '~> 1.0.10'          # PDFInfoAgent
+#gem 'twilio-ruby', '~> 3.11.5'    # TwilioAgent
+#gem 'ruby-growl', '~> 4.1.0'      # GrowlAgent
+#gem 'net-ftp-list', '~> 3.2.8'    # FtpsiteAgent
+#gem 'wunderground', '~> 1.2.0'    # WeatherAgent
+#gem 'forecast_io', '~> 2.0.0'     # WeatherAgent
+#gem 'rturk', '~> 2.12.1'          # HumanTaskAgent
+#gem 'hipchat', '~> 1.2.0'         # HipchatAgent
+#gem 'xmpp4r',  '~> 0.5.6'         # JabberAgent
+#gem 'mqtt'                        # MQTTAgent
+#gem 'slack-notifier', '~> 1.0.0'  # SlackAgent
+#gem 'hypdf', '~> 1.0.10'          # PDFInfoAgent
 
 # Weibo Agents
 # FIXME needs to loosen omniauth dependency, add rest-client
@@ -58,12 +58,12 @@ gem 'omniauth-twitter', '~> 1.3.0'
 
 # Tumblr Agents
 # until merge of https://github.com/tumblr/tumblr_client/pull/61
-gem 'tumblr_client', github: 'albertsun/tumblr_client', branch: 'master', ref: 'e046fe6e39291c173add0a49081630c7b60a36c7' 
+gem 'tumblr_client', github: 'albertsun/tumblr_client', branch: 'master', ref: 'e046fe6e39291c173add0a49081630c7b60a36c7'
 gem 'omniauth-tumblr', '~> 1.2'
 
 # Dropbox Agents
-gem 'dropbox-api', github: 'dsander/dropbox-api', ref: '86cb7b5a1254dc5b054de7263835713c4c1018c7'
-gem 'omniauth-dropbox-oauth2', github: 'bamorim/omniauth-dropbox-oauth2', ref: '35046706fb781ed3b57dfb9c3cd44ed0f3d3f8ea'
+gem 'dropbox-api'
+gem 'omniauth-dropbox'
 
 # UserLocationAgent
 gem 'haversine'
@@ -127,13 +127,14 @@ gem 'spectrum-rails'
 gem 'therubyracer', '~> 0.12.3'
 gem 'typhoeus', '~> 0.6.3'
 gem 'uglifier', '~> 2.7.2'
+gem 'google_maps_service', '~> 0.4.2'
 
 group :development do
   gem 'better_errors', '~> 1.1'
   gem 'binding_of_caller'
-  gem 'guard', '~> 2.14.1'
+  gem 'guard', '~> 2.13.0'
   gem 'guard-livereload', '~> 2.5.1'
-  gem 'guard-rspec', '~> 4.7.3'
+  gem 'guard-rspec', '~> 4.6.4'
   gem 'rack-livereload', '~> 0.3.16'
   gem 'letter_opener_web', '~> 1.3.1'
   gem 'web-console', '>= 3.3.0'
@@ -144,8 +145,8 @@ group :development do
 
   if_true(ENV['SPRING']) do
     gem 'spring-commands-rspec', '~> 1.0.4'
-    gem 'spring', '~> 2.0.2'
-    gem 'spring-watcher-listen', '~> 2.0.1'
+    gem 'spring', '~> 1.7.2'
+    gem 'spring-watcher-listen', '~> 2.0.0'
   end
 
   group :test do
